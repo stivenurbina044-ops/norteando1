@@ -1,17 +1,3 @@
-:root {
-    --color-fondo: #ffffff;
-    --color-texto: #2f2f2f;
-    --color-verde: #6b8f3f;
-    --color-verde-oscuro: #4a6741;
-}
-
-[data-tema="oscuro"] {
-    --color-fondo: #1e1e1e;
-    --color-texto: #e8e8e8;
-    --color-verde: #4a6741;
-    --color-verde-oscuro: #6b8f3f;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -20,17 +6,12 @@
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #2f2f2f;
 }
 
 .portada {
     height: 100vh;
-    background-image: linear-gradient(rgba(30, 45, 15, 0.55), rgba(30, 45, 15, 0.55)), url("https://picsum.photos/1600/900?random=10");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #6b8f3f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +42,7 @@ body {
 .biografia h2 {
     font-size: 2.2rem;
     margin-bottom: 25px;
-    color: var(--color-verde-oscuro);
+    color: #4a6741;
     text-align: center;
 }
 
@@ -72,21 +53,17 @@ body {
     text-align: justify;
 }
 
-@media (max-width: 600px) {
-    .timeline {
-        padding: 50px 20px 50px 30px;
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 80px 20px;
-        border-left: 3px solid #6b8f3f;
-    }
-}    
-
+.timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    border-left: 3px solid #6b8f3f;
+}
 
 .timeline h2 {
     font-size: 2.2rem;
     margin-bottom: 40px;
-    color: var(--color-verde-oscuro);
+    color: #4a6741;
     text-align: center;
     border-left: none;
     margin-left: -23px;
@@ -95,16 +72,16 @@ body {
 .evento {
     position: relative;
     margin-bottom: 35px;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 .evento::before {
     content: '';
     position: absolute;
-    left: -8px;
+    left: -9px;
     top: 5px;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background-color: #6b8f3f;
     border-radius: 50%;
 }
@@ -131,7 +108,7 @@ body {
 .galeria h2 {
     font-size: 2.2rem;
     margin-bottom: 40px;
-    color: var(--color-verde-oscuro);
+    color: #4a6741;
     text-align: center;
 }
 
@@ -207,7 +184,7 @@ html {
 
 .contacto h2 {
     font-size: 2.2rem;
-    color: var(--color-verde-oscuro);
+    color: #4a6741;
     margin-bottom: 15px;
 }
 
@@ -238,71 +215,4 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
-}
-
-.menu a.activo {
-    color: #a4c67d;
-    font-weight: bold;
-    border-bottom: 2px solid #a4c67d;
-}
-
-.toggle-tema {
-    background: none;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.2rem;
-    padding: 5px 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.toggle-tema:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 600px) {
-    .portada h1 {
-        font-size: 2.5rem;
-    }
-
-    .portada .lema {
-        font-size: 1.1rem;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .menu a {
-        font-size: 0.85rem;
-    }
-
-    .biografia,
-    .timeline,
-    .galeria,
-    .contacto {
-        padding: 50px 15px;
-    }
-
-    .biografia h2,
-    .timeline h2,
-    .galeria h2,
-    .contacto h2 {
-        font-size: 1.7rem;
-    }
-
-    .redes {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.cargando {
-    grid-column: 1 / -1;
-    text-align: center;
-    font-style: italic;
-    color: var(--color-texto);
 }
