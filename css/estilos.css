@@ -25,6 +25,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+@media (max-width: 600px) {
+    .portada {
+        background-position: center 20%;
+    }
+}
+
 .portada {
     height: 100vh;
     background-image: linear-gradient(rgba(30, 45, 15, 0.55), rgba(30, 45, 15, 0.55)), url("https://picsum.photos/1600/900?random=10");
